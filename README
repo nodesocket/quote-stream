@@ -1,21 +1,29 @@
-# Live Demo
-**Apple _(AAPL)_**
-### [http://xhv51cz0.nodesocket.com/quote-stream/AAPL/](http://xhv51cz0.nodesocket.com/quote-stream/AAPL/)
+Quote Stream
+===========
 
-Simply replace **AAPL** in the request URL with a valid ticker symbol that you wish to get quotes for. Currently, it only supports passing a single ticker symbol. Stock quotes are pulled from [Google Finance](http://finance.google.com) and are real-time.
+### A node.js application that pushes real-time stock quotes in JSON format over web-sockets.
 
-<a href="http://twitter.com/share" class="twitter-share-button" data-url="http://nodesocket.github.com/quote-stream" data-text="Quote Stream - A node.js app which pushes real-time stock quotes in JSON format over web-sockets. @nodesocket" data-related="nodesocket" data-count="horizontal">Tweet About Quote Stream</a>
+Live Demo
+========
 
-## Additional Details
+**Apple _(AAPL)_ **
+### <http://xhv51cz0.nodesocket.com/quote-stream/AAPL/>
+
+Simply replace **AAPL** in the request URL with a valid ticker symbol that you wish to get quotes for. Currently, it only supports passing a single ticker symbol. Stock quotes are pulled from <http://finance.google.com> and are real-time.
+
+Additional Details
+========
+
 By default stock quotes are fetched every **5 seconds**, and pushed to the client. The fetch interval can be adjusted, as well if you want the JSON response pretty-printed or not.
 
-## View The Code On GitHub
-### [https://github.com/nodesocket/quote-stream](https://github.com/nodesocket/quote-stream)
+Example Screen-Shot
+========
 
-## Example Screen-Shot
-![Screen Shot](http://i.imgur.com/FgTAW.png)
+![alt Screen-Shot](http://i.imgur.com/FgTAW.png "Screen-Shot")
 
-## Example JSON Response
+Example JSON Response
+========
+
     {
         "ticker": "AAPL",
         "exchange": "NASDAQ",
@@ -27,16 +35,22 @@ By default stock quotes are fetched every **5 seconds**, and pushed to the clien
         "yield": ""
     }
 
-## Author / Contact
+Author / Contact
+========
+
 **Created and coded by the NodeSocket team.**
 
-Website: [http://www.nodesocket.com](http://www.nodesocket.com)<br />
-Twitter: [http://www.twitter.com/nodesocket](http://www.twitter.com/nodesocket)<br />
-Problems? Bugs? Feature Requests? [https://github.com/nodesocket/quote-stream](https://github.com/nodesocket/quote-stream)
+_Website: <http://www.nodesocket.com>_
 
-## License & Legal
-_Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:_
+_Twitter: <http://www.twitter.com/nodesocket>_
 
-_The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software._
+Problems? Bugs? Feature Requests? _<https://github.com/nodesocket/quote-stream>_
 
-_THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE._
+License & Legal
+==============
+
+*Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:*
+
+*The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.*
+
+*THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.*
