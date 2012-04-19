@@ -11,7 +11,7 @@ Simply replace **AAPL** in the request URL with a **valid ticker symbol** that y
 
 ## Additional Details
 
-By default stock quotes are fetched every **5 seconds**, and pushed to the client. The fetch interval can be adjusted, as well if you want the JSON response pretty-printed or not.
+By default stock quotes are fetched every **5 seconds**, and pushed to the client. The fetch interval can be adjusted, and if you want the JSON response pretty-printed or not.
 
 ## Example Screen-Shot
 
