@@ -6,7 +6,7 @@ var REFRESH_INTERVAL = 5000;
 var PRETTY_PRINT_JSON = true;
 
 ///
-// START OF CODE
+// START OF APPLICATION
 ///
 var express = require('express');
 var http = require('http');
@@ -29,7 +29,7 @@ function get_quote(p_socket) {
 	http.get({
 		host: 'www.google.com',
 		port: 80,
-		path: '/finance/info?client=ig&q=' + ticker + ''
+		path: '/finance/info?client=ig&q=' + ticker
 	}, function(response) {
 		response.setEncoding('utf8');
 		var data = "";
