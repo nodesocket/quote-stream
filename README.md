@@ -7,7 +7,7 @@
 **Apple (AAPL)**
 ### <http://xhv51cz0.nodesocket.com/quote-stream/AAPL/>
 
-Simply replace **AAPL** in the request URL with a valid ticker symbol that you wish to get quotes for. Currently, it only supports passing a single ticker symbol. Stock quotes are pulled from <http://finance.google.com> and are real-time.
+### Simply replace **AAPL** in the request URL with a **valid ticker symbol** that you wish to get quotes for. Currently, it only supports passing a single ticker symbol. Stock quotes are pulled from <http://finance.google.com> and are real-time.
 
 ## Additional Details
 
