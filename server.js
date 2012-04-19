@@ -1,7 +1,7 @@
 /**
  * Quote Stream
  *
- * @version 0.1.0
+ * @version 0.1.1
  * @author NodeSocket <http://www.nodesocket.com> <hello@nodesocket.com>
  */
 
@@ -52,8 +52,6 @@ app.get('/:ticker/', function(req, res) {
 });
 
 function get_quote(p_socket) {
-	console.log(ticker);
-	
 	http.get({
 		host: 'www.google.com',
 		port: 80,
@@ -91,11 +89,17 @@ function get_quote(p_socket) {
 }
 
 io.sockets.on('connection', function(socket) {
+	var timer;
+	
 	//Run the first time immediately
 	get_quote(socket);
 	
 	//Every N seconds
-	setInterval(function() {
+	timer = setInterval(function() {
 		get_quote(socket)
 	}, FETCH_INTERVAL);
+	
+	socket.on('disconnect', function () {
+		clearInterval(timer);
+	});
 });
