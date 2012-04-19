@@ -1,28 +1,23 @@
-Quote Stream
-===========
+## Quote Stream
 
 ### A node.js application that pushes real-time stock quotes in JSON over web-sockets.
 
-Live Demo
-========
+## Live Demo
 
 **Apple (AAPL)**
-## <http://xhv51cz0.nodesocket.com/quote-stream/AAPL/>
+### <http://xhv51cz0.nodesocket.com/quote-stream/AAPL/>
 
 Simply replace **AAPL** in the request URL with a valid ticker symbol that you wish to get quotes for. Currently, it only supports passing a single ticker symbol. Stock quotes are pulled from <http://finance.google.com> and are real-time.
 
-Additional Details
-========
+## Additional Details
 
 By default stock quotes are fetched every **5 seconds**, and pushed to the client. The fetch interval can be adjusted, as well if you want the JSON response pretty-printed or not.
 
-Example Screen-Shot
-========
+## Example Screen-Shot
 
 ![alt Screen-Shot](http://i.imgur.com/FgTAW.png "Screen-Shot")
 
-Example JSON Response
-========
+## Example JSON Response
 
     {
         "ticker": "AAPL",
@@ -35,19 +30,15 @@ Example JSON Response
         "yield": ""
     }
 
-Author / Contact
-========
+## Author / Contact
 
 **Created and coded by the NodeSocket team.**
 
 _Website: <http://www.nodesocket.com>_
-
 _Twitter: <http://www.twitter.com/nodesocket>_
-
 Problems? Bugs? Feature Requests? _<https://github.com/nodesocket/quote-stream>_
 
-License & Legal
-==============
+## License & Legal
 
 *Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:*
 
