@@ -1,13 +1,13 @@
 Quote Stream
 ===========
 
-### A node.js application that pushes real-time stock quotes in JSON format over web-sockets.
+### A node.js application that pushes real-time stock quotes in JSON over web-sockets.
 
 Live Demo
 ========
 
-**Apple _(AAPL)_ **
-### <http://xhv51cz0.nodesocket.com/quote-stream/AAPL/>
+**Apple (AAPL)**
+## <http://xhv51cz0.nodesocket.com/quote-stream/AAPL/>
 
 Simply replace **AAPL** in the request URL with a valid ticker symbol that you wish to get quotes for. Currently, it only supports passing a single ticker symbol. Stock quotes are pulled from <http://finance.google.com> and are real-time.
 
