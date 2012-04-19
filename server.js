@@ -52,6 +52,8 @@ app.get('/:ticker/', function(req, res) {
 });
 
 function get_quote(p_socket) {
+	console.log(ticker);
+	
 	http.get({
 		host: 'www.google.com',
 		port: 80,
@@ -69,7 +71,6 @@ function get_quote(p_socket) {
 				try {
 					var data_object = JSON.parse(data.substring(3));
 				} catch(e) {
-					p_socket.emit('quote', '{error: "Confirm that the provided ticker \'' + ticker + '\' is correct."}');
 					return;
 				}
 									
@@ -84,8 +85,6 @@ function get_quote(p_socket) {
 				quote.yield = data_object[0].yld;
 				
 				p_socket.emit('quote', PRETTY_PRINT_JSON ? JSON.stringify(quote, true, '\t') : JSON.stringify(quote));
-			} else {
-				p_socket.emit('quote', '{error: "Confirm that the provided ticker \'' + ticker + '\' is correct."}');
 			}
 		});
 	});
