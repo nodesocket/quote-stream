@@ -36,6 +36,7 @@ By default stock quotes are fetched every **5 seconds**, and pushed to the clien
 
 _Website: <http://www.nodesocket.com>_<br />
 _Twitter: <http://www.twitter.com/nodesocket>_<br />
+_E-Mail: <hello@nodesocket.com>_
 
 ## License & Legal
 
