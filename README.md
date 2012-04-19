@@ -1,4 +1,4 @@
-## Quote Stream
+# Quote Stream
 
 ### A node.js application that pushes real-time stock quotes in JSON over web-sockets.
 
@@ -34,8 +34,8 @@ By default stock quotes are fetched every **5 seconds**, and pushed to the clien
 
 **Created and coded by the NodeSocket team.**
 
-_Website: <http://www.nodesocket.com>_
-_Twitter: <http://www.twitter.com/nodesocket>_
+_Website: <http://www.nodesocket.com>_<br />
+_Twitter: <http://www.twitter.com/nodesocket>_<br />
 Problems? Bugs? Feature Requests? _<https://github.com/nodesocket/quote-stream>_
 
 ## License & Legal
