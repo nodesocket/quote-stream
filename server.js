@@ -1,7 +1,7 @@
 /**
  * Quote Stream
  *
- * @version 0.1.1
+ * @version 0.2.0
  * @author NodeSocket <http://www.nodesocket.com> <hello@nodesocket.com>
  */
 
@@ -51,11 +51,28 @@ app.get('/:ticker/', function(req, res) {
 	res.sendfile(__dirname + '/index.html');
 });
 
-function get_quote(p_socket) {
+io.sockets.on('connection', function(socket) {
+	var local_ticker = ticker;
+	ticker = "";
+
+	//Run the first time immediately
+	get_quote(socket, local_ticker);
+
+	//Every N seconds
+	var timer = setInterval(function() {
+		get_quote(socket, local_ticker)
+	}, FETCH_INTERVAL);
+
+	socket.on('disconnect', function () {
+		clearInterval(timer);
+	});
+});
+
+function get_quote(p_socket, p_ticker) {
 	http.get({
 		host: 'www.google.com',
 		port: 80,
-		path: '/finance/info?client=ig&q=' + ticker
+		path: '/finance/info?client=ig&q=' + p_ticker
 	}, function(response) {
 		response.setEncoding('utf8');
 		var data = "";
@@ -87,19 +104,3 @@ function get_quote(p_socket) {
 		});
 	});
 }
-
-io.sockets.on('connection', function(socket) {
-	var timer;
-	
-	//Run the first time immediately
-	get_quote(socket);
-	
-	//Every N seconds
-	timer = setInterval(function() {
-		get_quote(socket)
-	}, FETCH_INTERVAL);
-	
-	socket.on('disconnect', function () {
-		clearInterval(timer);
-	});
-});
