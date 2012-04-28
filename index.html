@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Quote Stream : A node.js application that pushes real-time stock quotes in JSON over web-sockets." />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Quote Stream</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/nodesocket/quote-stream">Fork Me on GitHub</a>
+
+          <h1 id="project_title">Quote Stream</h1>
+          <h2 id="project_tagline">A node.js application that pushes real-time stock quotes in JSON over web-sockets.</h2>
+
+          <section id="downloads">
+            <a class="zip_download_link" href="https://github.com/nodesocket/quote-stream/zipball/master">Download this project as a .zip file</a>
+            <a class="tar_download_link" href="https://github.com/nodesocket/quote-stream/tarball/master">Download this project as a tar.gz file</a>
+          </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>Quote Stream</h1>
+
+<h3>A node.js application that pushes real-time stock quotes in JSON over web-sockets.</h3>
+
+<h2>Usage</h2>
+
+<p><strong>Apple Inc. (AAPL)</strong></p>
+
+<h3><a href="http://localhost:4000/AAPL/">http://localhost:4000/AAPL/</a></h3>
+
+<p>Simply replace <strong>AAPL</strong> in the URL with a <strong>valid ticker symbol</strong>. Currently, Quote Stream only supports passing a single ticker symbol. Stock quotes are pulled from <a href="http://finance.google.com">http://finance.google.com</a> and are real-time.</p>
+
+<h2>Additional Details</h2>
+
+<p>By default stock quotes are fetched every <strong>5 seconds</strong>, and pushed to the client. The fetch interval can be adjusted, and if you want the JSON response pretty-printed or not.</p>
+
+<h2>Example Screen-Shot</h2>
+
+<p><img src="http://i.imgur.com/FgTAW.png" alt="alt Screen-Shot" title="Screen-Shot"></p>
+
+<h2>Example JSON Response</h2>
+
+<pre><code>{
+    "ticker": "AAPL",
+    "exchange": "NASDAQ",
+    "price": "608.34",
+    "change": "-1.36",
+    "change_percent": "-0.22",
+    "last_trade_time": "Apr 18, 4:00PM EDT",
+    "dividend": "2.65",
+    "yield": ""
+}
+</code></pre>
+
+<h2>Author / Contact</h2>
+
+<p><strong>Created and coded by the NodeSocket team.</strong></p>
+
+<p><em>Website: <a href="http://www.nodesocket.com">http://www.nodesocket.com</a></em><br><em>Twitter: <a href="http://www.twitter.com/nodesocket">http://www.twitter.com/nodesocket</a></em><br><em>E-Mail: <a href="mailto:hello@nodesocket.com">hello@nodesocket.com</a></em></p>
+
+<h2>License &amp; Legal</h2>
+
+<p><em>Copyright (C) 2012 NodeSocket LLC</em></p>
+
+<p><em>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</em></p>
+
+<p><em>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</em></p>
+
+<p><em>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</em></p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Quote Stream maintained by <a href="https://github.com/nodesocket">nodesocket</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-15085086-11");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+
+  </body>
+</html>
