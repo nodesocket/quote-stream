@@ -2,7 +2,7 @@
 
 ### A node.js application that pushes real-time stock quotes in JSON over web-sockets.
 
-## Live Demo
+## Usage
 
 **Apple Inc. (AAPL)**
 ### <http://localhost:4000/AAPL/>
