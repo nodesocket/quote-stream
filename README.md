@@ -5,9 +5,9 @@
 ## Live Demo
 
 **Apple Inc. (AAPL)**
-### <http://xhv51cz0.nodesocket.com/quote-stream/AAPL/>
+### <http://localhost:4000/AAPL/>
 
-Simply replace **AAPL** in the above URL with a **valid ticker symbol**. Currently, Quote Stream only supports passing a single ticker symbol. Stock quotes are pulled from <http://finance.google.com> and are real-time.
+Simply replace **AAPL** in the URL with a **valid ticker symbol**. Currently, Quote Stream only supports passing a single ticker symbol. Stock quotes are pulled from <http://finance.google.com> and are real-time.
 
 ## Additional Details
 
