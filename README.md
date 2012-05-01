@@ -5,7 +5,7 @@
 ## Usage
 
 **Apple Inc. (AAPL)**
-### <http://localhost:4000/AAPL/>
+### <http://localhost:4000/AAPL>
 
 Simply replace **AAPL** in the URL with a **valid ticker symbol**. Currently, Quote Stream only supports passing a single ticker symbol. Stock quotes are pulled from <http://finance.google.com> and are real-time.
 

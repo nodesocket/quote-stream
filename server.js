@@ -1,7 +1,7 @@
 /**
  * Quote Stream
  *
- * @version 0.2.0
+ * @version 0.2.1
  * @author NodeSocket <http://www.nodesocket.com> <hello@nodesocket.com>
  */
 
@@ -46,7 +46,7 @@ io.set('log level', 1);
 server.listen(PORT);
 
 var ticker = "";
-app.get('/:ticker/', function(req, res) {
+app.get('/:ticker', function(req, res) {
 	ticker = req.params.ticker;
 	res.sendfile(__dirname + '/index.html');
 });

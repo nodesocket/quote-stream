@@ -1,5 +1,9 @@
 ## CHANGELOG
 
+### Version 0.2.1
+- Fixed a bug when not providing a trailing slash after the ticker symbol. https://github.com/nodesocket/quote-stream/issues/1
+- Slight update to the documentation to reflect a trailing slash after the ticker symbol is not required.
+
 ### Version 0.2.0
 - Fixed a bug where other ticker requests would stream in. For example, if a client requested GOOG, and then another client connected requesting MSFT, the first connected client would see MSFT stream in.
 
