@@ -21,6 +21,10 @@
                   $(data).show("slide", { direction: "up" }, 250);
                   $(data).effect("highlight", {}, 1500); 
               });
+            $(window).on('hashchange', function() {
+              var ticker = location.hash.substr(1);
+              socket.emit('ticker', ticker);
+            });
         });
     </script>
     <body>
