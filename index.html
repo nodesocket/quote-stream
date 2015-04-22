@@ -11,7 +11,9 @@
     </head>
     <script type="text/javascript">
         $(document).ready(function() {
+            var ticker = location.hash.substr(1);
             var socket = io.connect("http://localhost:4000");
+              socket.emit('ticker', ticker);
               socket.on('quote', function(data) {
                   var data = $("<pre>" + data + "</pre><hr />");
                   $("#quotes").append(data);

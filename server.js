@@ -45,28 +45,30 @@ io.set('log level', 1);
 
 server.listen(PORT);
 
-var ticker = "";
-app.get('/:ticker', function(req, res) {
-	ticker = req.params.ticker;
+app.get('/', function(req, res) {
 	res.sendfile(__dirname + '/index.html');
 });
 
 io.sockets.on('connection', function(socket) {
-	var local_ticker = ticker;
-	ticker = "";
+	socket.on('ticker', function(ticker) {
+		track_ticker(socket, ticker);
+	});
+});
+
+function track_ticker(socket, ticker) {
 
 	//Run the first time immediately
-	get_quote(socket, local_ticker);
+	get_quote(socket, ticker);
 
 	//Every N seconds
 	var timer = setInterval(function() {
-		get_quote(socket, local_ticker)
+		get_quote(socket, ticker)
 	}, FETCH_INTERVAL);
 
 	socket.on('disconnect', function () {
 		clearInterval(timer);
 	});
-});
+}
 
 function get_quote(p_socket, p_ticker) {
 	http.get({
