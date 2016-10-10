@@ -6,15 +6,15 @@
  */
 
  /*
- * Copyright (C) 2012 NodeSocket LLC 
+ * Copyright (C) 2012 NodeSocket LLC
  *
- * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and 
- * associated documentation files (the "Software"), to deal in the Software without restriction, including 
+ * Permission is hereby granted, free of charge, to any person obtaining a copy of this software and
+ * associated documentation files (the "Software"), to deal in the Software without restriction, including
  * without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
  * copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the
  * following conditions:
  *
- * The above copyright notice and this permission notice shall be included in all copies or substantial 
+ * The above copyright notice and this permission notice shall be included in all copies or substantial
  * portions of the Software.
  *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED
@@ -40,10 +40,22 @@ var io = require('socket.io');
 
 var app = express();
 var server = http.createServer(app);
-var io = io.listen(server);
-io.set('log level', 1);
+var cors = require('cors');
+app.use(cors());
+var io = io.listen(server, { origins: 'http://localhost:*'});
+io.set('origins', '*:*');
+// io.set('log level', 1);
+// io.set('transports', ['websocket', 'xhr-polling', 'jsonp-polling', 'htmlfile', 'flashsocket']);
+io.set('transports', [ 'websocket' ]);
+
 
 server.listen(PORT);
+
+// app.use(function(req, res, next) {
+//   res.setHeader("Access-Control-Allow-Origin", "*");
+//   res.setHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+//   next();
+// });
 
 app.get('/', function(req, res) {
 	res.sendfile(__dirname + '/index.html');
@@ -78,11 +90,11 @@ function get_quote(p_socket, p_ticker) {
 	}, function(response) {
 		response.setEncoding('utf8');
 		var data = "";
-					
+
 		response.on('data', function(chunk) {
 			data += chunk;
 		});
-		
+
 		response.on('end', function() {
 			if(data.length > 0) {
 				try {
@@ -90,7 +102,7 @@ function get_quote(p_socket, p_ticker) {
 				} catch(e) {
 					return;
 				}
-									
+
 				var quote = {};
 				quote.ticker = data_object[0].t;
 				quote.exchange = data_object[0].e;
@@ -100,7 +112,7 @@ function get_quote(p_socket, p_ticker) {
 				quote.last_trade_time = data_object[0].lt;
 				quote.dividend = data_object[0].div;
 				quote.yield = data_object[0].yld;
-				
+
 				p_socket.emit('quote', PRETTY_PRINT_JSON ? JSON.stringify(quote, true, '\t') : JSON.stringify(quote));
 			}
 		});
