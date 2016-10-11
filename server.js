@@ -27,7 +27,6 @@
 ////
 // CONFIGURATION SETTINGS
 ///
-var PORT = 4000;
 var FETCH_INTERVAL = 5000;
 var PRETTY_PRINT_JSON = true;
 
@@ -45,7 +44,7 @@ app.use(cors());
 
 var io = io.listen(server, { origins: 'http://localhost:* https://github.io:*'});
 
-server.listen(PORT);
+server.listen(process.env.PORT || 4000);
 
 app.get('/', function(req, res) {
 	res.sendfile(__dirname + '/index.html');
