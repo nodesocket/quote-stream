@@ -37,11 +37,12 @@ var PRETTY_PRINT_JSON = true;
 var express = require('express');
 var http = require('http');
 var io = require('socket.io');
+var cors = require('cors');
 
 var app = express();
 var server = http.createServer(app);
-var cors = require('cors');
 app.use(cors());
+
 var io = io.listen(server, { origins: 'http://localhost:* https://github.io:*'});
 
 server.listen(PORT);
