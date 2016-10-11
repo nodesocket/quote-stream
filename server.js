@@ -44,7 +44,6 @@ app.use(cors());
 
 var io = io.listen(server);
 io.set('origins', '*:*');
-io.set('match origin protocol', true);
 
 server.listen(process.env.PORT || 4000);
 
