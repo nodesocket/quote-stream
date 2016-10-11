@@ -44,6 +44,7 @@ app.use(cors());
 
 var io = io.listen(server);
 io.set('origins', '*:*');
+io.set('transports', ['websocket']);
 
 server.listen(process.env.PORT || 4000);
 
