@@ -1,5 +1,5 @@
-<!doctype html> 
-<html lang="en"> 
+<!doctype html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <title>
@@ -14,12 +14,12 @@
             var ticker = location.hash.substr(1);
             var socket = io.connect("http://localhost:4000");
               socket.emit('ticker', ticker);
-              socket.on('quote', function(data) {
+              socket.on(ticker, function(data) {
                   var data = $("<pre>" + data + "</pre><hr />");
                   $("#quotes").append(data);
                   $("html, body").animate({ scrollTop: $(document).height() }, 100);
                   $(data).show("slide", { direction: "up" }, 250);
-                  $(data).effect("highlight", {}, 1500); 
+                  $(data).effect("highlight", {}, 1500);
               });
             $(window).on('hashchange', function() {
               var ticker = location.hash.substr(1);

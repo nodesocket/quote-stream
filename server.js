@@ -43,19 +43,8 @@ var server = http.createServer(app);
 var cors = require('cors');
 app.use(cors());
 var io = io.listen(server, { origins: 'http://localhost:*'});
-io.set('origins', '*:*');
-// io.set('log level', 1);
-// io.set('transports', ['websocket', 'xhr-polling', 'jsonp-polling', 'htmlfile', 'flashsocket']);
-io.set('transports', [ 'websocket' ]);
-
 
 server.listen(PORT);
-
-// app.use(function(req, res, next) {
-//   res.setHeader("Access-Control-Allow-Origin", "*");
-//   res.setHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-//   next();
-// });
 
 app.get('/', function(req, res) {
 	res.sendfile(__dirname + '/index.html');
@@ -113,7 +102,7 @@ function get_quote(p_socket, p_ticker) {
 				quote.dividend = data_object[0].div;
 				quote.yield = data_object[0].yld;
 
-				p_socket.emit('quote', PRETTY_PRINT_JSON ? JSON.stringify(quote, true, '\t') : JSON.stringify(quote));
+				p_socket.emit(p_ticker, PRETTY_PRINT_JSON ? JSON.stringify(quote, true, '\t') : JSON.stringify(quote));
 			}
 		});
 	});
