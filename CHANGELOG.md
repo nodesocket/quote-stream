@@ -2,7 +2,7 @@
 
 ### Verson 0.3.0
 
-- Switched to pulling quotes via https (port 443)* from Google.
+- Switched to pulling quotes via https *(port 443)* from Google.
 - Upgraded npm dependencies.
 - Supports CORS.
 - Added `package.json` and remove `node_modules` from being checked in.
