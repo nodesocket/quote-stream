@@ -1,13 +1,12 @@
 {
   "name": "quote-stream",
-  "version": "1.0.0",
-  "description": "### A node.js application that pushes real-time stock quotes in JSON over web-sockets.",
+  "version": "0.3.0",
+  "description": "Push JSON stock quotes in real-time over web-sockets",
   "main": "server.js",
   "dependencies": {
     "cors": "2.8.1",
-    "express": "3.20.2",
-    "http": "0.0.0",
-    "socket.io": "1.5.0"
+    "express": "3.21.2",
+    "socket.io": "1.5.1"
   },
   "devDependencies": {},
   "scripts": {
@@ -16,12 +15,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/stantoncbradley/quote-stream.git"
+    "url": "git@github.com:nodesocket/quote-stream.git"
   },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/stantoncbradley/quote-stream/issues"
-  },
-  "homepage": "https://github.com/stantoncbradley/quote-stream#readme"
+  "author": "Justin Keller",
+  "license": "Apache-2.0"
 }

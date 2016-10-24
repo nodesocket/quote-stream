@@ -1,5 +1,12 @@
 ## CHANGELOG
 
+### Verson 0.3.0
+
+- Upgraded npm dependencies.
+- Supports CORS.
+- Added package.json and remove node_modules being checked in.
+- License updated to Apache 2.0
+
 ### Version 0.2.1
 - Fixed a bug when not providing a trailing slash after the ticker symbol. https://github.com/nodesocket/quote-stream/issues/1
 - Slight update to the documentation to reflect a trailing slash after the ticker symbol is not required.
