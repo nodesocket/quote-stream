@@ -10,15 +10,17 @@
         <script type="text/javascript" src="http://localhost:4000/socket.io/socket.io.js"></script>
     </head>
     <script type="text/javascript">
+        'use strict';
+
         $(document).ready(function() {
             var ticker = location.hash.substr(1);
-            var socket = io.connect('http://localhost:4000');
+            var socket = io.connect('http://localhost:4000'); // jshint ignore:line
               socket.emit('ticker', ticker);
-              socket.on(ticker, function(data) {
-                  var data = $('<pre>' + data + '</pre><hr />');
+              socket.on(ticker, function(response) {
+                  var data = $('<pre>' + response + '</pre><hr />');
                   $('#quotes').append(data);
                   $('html, body').animate({ scrollTop: $(document).height() }, 100);
-                  $(data).show('slide', { direction: 'up' }, 250);
+                  $(data).show('slide', { direction: 'up' }, 300);
                   $(data).effect('highlight', {}, 1500);
               });
 

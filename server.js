@@ -59,10 +59,10 @@ function getQuote(socket, ticker) {
                 var quote = {};
                 quote.ticker = dataObj[0].t;
                 quote.exchange = dataObj[0].e;
-                quote.price = dataObj[0].l_cur;
+                quote.price = dataObj[0].l_cur; // jshint ignore:line
                 quote.change = dataObj[0].c;
-                quote.change_percent = dataObj[0].cp;
-                quote.last_trade_time = dataObj[0].lt;
+                quote.change_percent = dataObj[0].cp; // jshint ignore:line
+                quote.last_trade_time = dataObj[0].lt; // jshint ignore:line
                 quote.dividend = dataObj[0].div;
                 quote.yield = dataObj[0].yld;
 

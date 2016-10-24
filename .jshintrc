@@ -5,10 +5,10 @@
    */
 
   // Define globals exposed by modern browsers.
-  "browser": false,
+  "browser": true,
 
   // Define globals exposed by jQuery.
-  "jquery": false,
+  "jquery": true,
 
   // Define globals exposed by Node.js.
   "node": true,
