@@ -27,14 +27,17 @@ var PRETTY_PRINT_JSON = true;
 ///
 var express = require('express');
 var http = require('http');
+var https = require('https');
 var io = require('socket.io');
 var cors = require('cors');
 
 function getQuote(socket, ticker) {
-	http.get({
-		host: 'https://www.google.com',
-		port: 443,
-		path: '/finance/info?client=ig&q=' + ticker
+	https.get({
+        port: 443,
+        method: 'GET',
+		hostname: 'www.google.com',
+		path: '/finance/info?client=ig&q=' + ticker,
+        timeout: 1000
 	}, function(response) {
 		response.setEncoding('utf8');
 		var data = '';
