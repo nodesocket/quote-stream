@@ -18,13 +18,13 @@ limitations under the License.
 
 ////
 // CONFIGURATION SETTINGS
-///
+////
 var FETCH_INTERVAL = 5000;
 var PRETTY_PRINT_JSON = true;
 
-///
+////
 // START
-///
+////
 var express = require('express');
 var http = require('http');
 var https = require('https');
@@ -73,10 +73,10 @@ function getQuote(socket, ticker) {
 }
 
 function trackTicker(socket, ticker) {
-    //Run the first time immediately
+    // run the first time immediately
     getQuote(socket, ticker);
 
-    //Every N seconds
+    // every N seconds
     var timer = setInterval(function() {
         getQuote(socket, ticker);
     }, FETCH_INTERVAL);
@@ -87,13 +87,11 @@ function trackTicker(socket, ticker) {
 }
 
 var app = express();
-var server = http.createServer(app);
 app.use(cors());
+var server = http.createServer(app);
 
 var io = io.listen(server);
 io.set('origins', '*:*');
-
-server.listen(process.env.PORT || 4000);
 
 app.get('/', function(req, res) {
     res.sendfile(__dirname + '/index.html');
@@ -104,3 +102,5 @@ io.sockets.on('connection', function(socket) {
         trackTicker(socket, ticker);
     });
 });
+
+server.listen(process.env.PORT || 4000);
