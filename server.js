@@ -32,44 +32,44 @@ var io = require('socket.io');
 var cors = require('cors');
 
 function getQuote(socket, ticker) {
-	https.get({
+    https.get({
         port: 443,
         method: 'GET',
         hostname: 'www.google.com',
         path: '/finance/info?client=ig&q=' + ticker,
         timeout: 1000
-	}, function(response) {
-		response.setEncoding('utf8');
-		var data = '';
+    }, function(response) {
+        response.setEncoding('utf8');
+        var data = '';
 
-		response.on('data', function(chunk) {
-			data += chunk;
-		});
+        response.on('data', function(chunk) {
+            data += chunk;
+        });
 
-		response.on('end', function() {
-			if(data.length > 0) {
-				var dataObj;
+        response.on('end', function() {
+            if(data.length > 0) {
+                var dataObj;
 
                 try {
-					dataObj = JSON.parse(data.substring(3));
-				} catch(e) {
-					return false;
-				}
+                    dataObj = JSON.parse(data.substring(3));
+                } catch(e) {
+                    return false;
+                }
 
-				var quote = {};
-				quote.ticker = dataObj[0].t;
-				quote.exchange = dataObj[0].e;
-				quote.price = dataObj[0].l_cur;
-				quote.change = dataObj[0].c;
-				quote.change_percent = dataObj[0].cp;
-				quote.last_trade_time = dataObj[0].lt;
-				quote.dividend = dataObj[0].div;
-				quote.yield = dataObj[0].yld;
+                var quote = {};
+                quote.ticker = dataObj[0].t;
+                quote.exchange = dataObj[0].e;
+                quote.price = dataObj[0].l_cur;
+                quote.change = dataObj[0].c;
+                quote.change_percent = dataObj[0].cp;
+                quote.last_trade_time = dataObj[0].lt;
+                quote.dividend = dataObj[0].div;
+                quote.yield = dataObj[0].yld;
 
-				socket.emit(ticker, PRETTY_PRINT_JSON ? JSON.stringify(quote, null, 4) : JSON.stringify(quote));
-			}
-		});
-	});
+                socket.emit(ticker, PRETTY_PRINT_JSON ? JSON.stringify(quote, null, 4) : JSON.stringify(quote));
+            }
+        });
+    });
 }
 
 function trackTicker(socket, ticker) {
