@@ -32,8 +32,8 @@ var cors = require('cors');
 
 function getQuote(socket, ticker) {
 	http.get({
-		host: 'www.google.com',
-		port: 80,
+		host: 'https://www.google.com',
+		port: 443,
 		path: '/finance/info?client=ig&q=' + ticker
 	}, function(response) {
 		response.setEncoding('utf8');

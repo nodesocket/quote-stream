@@ -1,13 +1,13 @@
 # Quote Stream
 
-Push JSON stock quotes in real-time over web-socket.
+Push JSON stock quotes in real-time over web-sockets.
 
 ## Usage
 
 **Apple Inc. (AAPL)**
 ### <http://localhost:4000/#AAPL>
 
-Simply replace **AAPL** in the URL with a **valid ticker symbol**. Stock quotes are pulled from <http://finance.google.com> and are real-time.
+Simply replace **AAPL** in the URL with a **valid ticker symbol**. Stock quotes are pulled from <https://finance.google.com> and are real-time.
 
 ## Additional Details
 

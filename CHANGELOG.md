@@ -2,6 +2,7 @@
 
 ### Verson 0.3.0
 
+- Switched to pulling via https **(port 443)** from Google.
 - Upgraded npm dependencies.
 - Supports CORS.
 - Added package.json and remove node_modules being checked in.
