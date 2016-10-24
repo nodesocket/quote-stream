@@ -1,94 +1,87 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en-us">
   <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Quote Stream : A node.js application that pushes real-time stock quotes in JSON over web-sockets." />
-
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>Quote Stream</title>
+    <meta charset="UTF-8">
+    <title>Quote Stream by nodesocket</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
   </head>
-
   <body>
+    <section class="page-header">
+      <h1 class="project-name">Quote Stream</h1>
+      <h2 class="project-tagline">Push JSON stock quotes in real-time over websockets.</h2>
+      <a href="https://github.com/nodesocket/quote-stream" class="btn">View on GitHub</a>
+      <a href="https://github.com/nodesocket/quote-stream/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/nodesocket/quote-stream/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/nodesocket/quote-stream">Fork Me on GitHub</a>
+    <section class="main-content">
+      <h1>
+<a id="quote-stream" class="anchor" href="#quote-stream" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Quote Stream</h1>
 
-          <h1 id="project_title">Quote Stream</h1>
-          <h2 id="project_tagline">A node.js application that pushes real-time stock quotes in JSON over web-sockets.</h2>
+<p>Push JSON stock quotes in real-time over websockets.</p>
 
-          <section id="downloads">
-            <a class="zip_download_link" href="https://github.com/nodesocket/quote-stream/zipball/master">Download this project as a .zip file</a>
-            <a class="tar_download_link" href="https://github.com/nodesocket/quote-stream/tarball/master">Download this project as a tar.gz file</a>
-          </section>
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-
-<h2>Usage</h2>
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage</h2>
 
 <p><strong>Apple Inc. (AAPL)</strong></p>
 
-<h3><a href="http://localhost:4000/AAPL">http://localhost:4000/AAPL</a></h3>
+<h3>
+<a id="httplocalhost4000aapl" class="anchor" href="#httplocalhost4000aapl" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><a href="http://localhost:4000/#AAPL">http://localhost:4000/#AAPL</a>
+</h3>
 
-<p>Simply replace <strong>AAPL</strong> in the URL with a <strong>valid ticker symbol</strong>. Currently, Quote Stream only supports passing a single ticker symbol. Stock quotes are pulled from <a href="http://finance.google.com">http://finance.google.com</a> and are real-time.</p>
+<p>Simply replace <strong>AAPL</strong> in the URL with a <strong>valid ticker symbol</strong>. Stock quotes are pulled from <a href="https://www.google.com/finance">https://www.google.com/finance</a> and are real-time.</p>
 
-<h2>Additional Details</h2>
+<h2>
+<a id="additional-details" class="anchor" href="#additional-details" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Additional Details</h2>
 
-<p>By default stock quotes are fetched every <strong>5 seconds</strong>, and pushed to the client. The fetch interval can be adjusted, and if you want the JSON response pretty-printed or not.</p>
+<p>By default stock quotes are fetched every <strong>5 seconds</strong> and pushed to the client. The fetch interval can be adjusted as well as if you want the JSON response pretty-printed or not.</p>
 
-<h2>Example Screen-Shot</h2>
-
-<p><img src="http://i.imgur.com/FgTAW.png" alt="alt Screen-Shot" title="Screen-Shot"></p>
-
-<h2>Example JSON Response</h2>
+<h2>
+<a id="example-json-response" class="anchor" href="#example-json-response" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Example JSON Response</h2>
 
 <pre><code>{
     "ticker": "AAPL",
     "exchange": "NASDAQ",
-    "price": "608.34",
-    "change": "-1.36",
-    "change_percent": "-0.22",
-    "last_trade_time": "Apr 18, 4:00PM EDT",
-    "dividend": "2.65",
-    "yield": ""
+    "price": "116.60",
+    "change": "-0.46",
+    "change_percent": "-0.39",
+    "last_trade_time": "Oct 21, 4:00PM EDT",
+    "dividend": "0.57",
+    "yield": "1.96"
 }
 </code></pre>
 
-<h2>Author / Contact</h2>
+<h2>
+<a id="license--legal" class="anchor" href="#license--legal" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>License &amp; Legal</h2>
 
-<p><strong>Created and coded by the NodeSocket team.</strong></p>
+<p>Copyright 2016 Justin Keller</p>
 
-<p><em>Website: <a href="http://www.nodesocket.com">http://www.nodesocket.com</a></em><br><em>Twitter: <a href="http://www.twitter.com/nodesocket">http://www.twitter.com/nodesocket</a></em><br><em>E-Mail: <a href="mailto:hello@nodesocket.com">hello@nodesocket.com</a></em></p>
+<p>Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at</p>
 
-<h2>License &amp; Legal</h2>
+<pre><code>http://www.apache.org/licenses/LICENSE-2.0
+</code></pre>
 
-<p><em>Copyright (C) 2012 NodeSocket LLC</em></p>
+<p>Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.</p>
 
-<p><em>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</em></p>
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/nodesocket/quote-stream">Quote Stream</a> is maintained by <a href="https://github.com/nodesocket">nodesocket</a>.</span>
 
-<p><em>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</em></p>
-
-<p><em>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</em></p>
-      </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Quote Stream maintained by <a href="https://github.com/nodesocket">nodesocket</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
       </footer>
-    </div>
 
-              <script type="text/javascript">
+    </section>
+
+            <script type="text/javascript">
             var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
             document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
           </script>
@@ -98,7 +91,6 @@
             pageTracker._trackPageview();
             } catch(err) {}
           </script>
-
 
   </body>
 </html>
