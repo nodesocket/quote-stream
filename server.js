@@ -35,8 +35,8 @@ function getQuote(socket, ticker) {
 	https.get({
         port: 443,
         method: 'GET',
-		hostname: 'www.google.com',
-		path: '/finance/info?client=ig&q=' + ticker,
+        hostname: 'www.google.com',
+        path: '/finance/info?client=ig&q=' + ticker,
         timeout: 1000
 	}, function(response) {
 		response.setEncoding('utf8');
