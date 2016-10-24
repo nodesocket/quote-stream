@@ -2,11 +2,11 @@
 
 ### Verson 0.3.0
 
-- Switched to pulling via https **(port 443)** from Google.
+- Switched to pulling quotes via https (port 443)* from Google.
 - Upgraded npm dependencies.
 - Supports CORS.
-- Added package.json and remove node_modules being checked in.
-- License updated to Apache 2.0
+- Added `package.json` and remove `node_modules` from being checked in.
+- License updated to Apache 2.0.
 
 ### Version 0.2.1
 - Fixed a bug when not providing a trailing slash after the ticker symbol. https://github.com/nodesocket/quote-stream/issues/1

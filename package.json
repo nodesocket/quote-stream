@@ -1,7 +1,7 @@
 {
   "name": "quote-stream",
   "version": "0.3.0",
-  "description": "Push JSON stock quotes in real-time over web-sockets",
+  "description": "Push JSON stock quotes in real-time over websockets",
   "main": "server.js",
   "dependencies": {
     "cors": "2.8.1",

@@ -1,6 +1,6 @@
 # Quote Stream
 
-Push JSON stock quotes in real-time over web-sockets.
+Push JSON stock quotes in real-time over websockets.
 
 ## Usage
 
