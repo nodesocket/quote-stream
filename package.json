@@ -13,7 +13,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "lint": "jshint --exclude node_modules ."
+    "lint": "jshint --exclude node_modules .",
+    "echo-branch": "node echoBranch.js"
   },
   "repository": {
     "type": "git",

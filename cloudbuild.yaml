@@ -3,3 +3,7 @@ steps:
   args: ['install']
 - name: 'gcr.io/cloud-builders/yarn'
   args: ['run', 'lint']
+- name: 'gcr.io/cloud-builders/yarn'
+  args: ['run', 'echo-branch']
+  env:
+    - 'BRANCH=$BRANCH_NAME'
