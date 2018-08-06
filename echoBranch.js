@@ -1,9 +1,9 @@
 'use strict';
 
-const branch = process.env.BRANCH_NAME;
+const branch = process.env.BRANCH;
 
 if(!branch) {
-    console.error(`Environmental variable 'BRANCH_NAME' not set`);
+    console.error(`Environmental variable 'BRANCH' not set`);
     process.exit(3);
 }
 
