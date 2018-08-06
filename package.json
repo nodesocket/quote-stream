@@ -6,12 +6,14 @@
   "dependencies": {
     "cors": "2.8.1",
     "express": "3.21.2",
+    "jshint": "2.9.6",
     "socket.io": "1.5.1"
   },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "lint": "jshint --exclude node_modules ."
   },
   "repository": {
     "type": "git",
